@@ -1,0 +1,193 @@
+:root {
+  --primary: #f5a623;
+  --dark: #222;
+  --light: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  font-weight: bold;
+}
+
+.section h3 span {
+  color: #6366f1;
+}
+
+.section h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  display: block;
+  margin: 10px auto 0;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+}
+
+.faculty-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.faculty-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+}
+
+.faculty-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.faculty-card h4 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+}
+
+.faculty-card p {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.cta {
+  background-color: var(--primary);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cta h4 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.cta a {
+  background-color: white;
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta a:hover {
+  background-color: var(--dark);
+  color: white;
+}
+
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+}

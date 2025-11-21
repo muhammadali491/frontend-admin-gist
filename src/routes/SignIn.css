@@ -1,0 +1,18 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  background: url("images/Gallery/4.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+form {
+  height: max-content;
+}
+form,
+h1,
+h2,
+* {
+  padding: 0%;
+  margin: 0%;
+}

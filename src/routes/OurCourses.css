@@ -1,0 +1,154 @@
+.courses-preview-section {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-heading span {
+  color: #1e88e5;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #e0e0e0;
+  }
+  border-radius: 16px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 340px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image {
+  transform: scale(1.05);
+}
+
+.overlay-info {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #fff;
+  text-align: left;
+}
+
+.overlay-info h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.overlay-info p {
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.course-content {
+  padding: 20px;
+  background-color: #fdfdfd;
+}
+
+.course-content h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.course-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.course-footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.course-duration {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+.enroll-btn {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enroll-btn:hover {
+  background: #1565c0;
+}
+
+.see-all-wrapper {
+  margin-top: 40px;
+}
+
+.see-all-link {
+  font-size: 16px;
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.see-all-link:hover {
+  color: #0d47a1;
+}
+
+@media screen and (max-width: 768px) {
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

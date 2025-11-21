@@ -1,0 +1,51 @@
+/* Loading.css */
+.loading-container {
+  height: 50vh;
+  /* background: linear-gradient(to bottom right, #000000, #1a1a1a, #2a2a2a); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #6366f1;
+  text-align: center;
+}
+
+.loading-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+.progress-bar {
+  width: 80%;
+  max-width: 400px;
+  height: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00ccff55;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #4e51eb);
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #6366f1;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
