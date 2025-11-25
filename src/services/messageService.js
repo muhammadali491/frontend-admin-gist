@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // const API_URL = "http://localhost:5000/api/gallery";
-const API_URL = "https://backend-gist-production.up.railway.app/api/message";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/message`;
 
 export const getMessage = async () => {
   const response = await axios.get(API_URL);
